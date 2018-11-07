@@ -1,0 +1,18 @@
+<h1><%= @restaurant.name %></h1>
+<h2><%= @restaurant.address %></h2>
+<div>
+<% @restaurant.reviews.each do |review| %>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-review-content"> <%= review.content %></h5>
+      <h6 class="card-review-rating mb-2 text-muted"><%= review.rating %></h6>
+      <%= redirect_to restaurant_path %>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+</div>
+
+  <h3><%= review.content %></h3>
+  <h4><%= review.rating %></h4>
+<% end %>
