@@ -5,3 +5,21 @@
           <%= review.content %>
           <%= review.rating %>
 
+<div>
+  <div class="container">
+    <div class="row">
+      <div class="card">
+        <% @restaurant.reviews.each do |review| %>
+          <%= @restaurant.name %>
+          <%= @restaurant.address %>
+          <%= review.content %>
+          <%= review.rating %>
+        <% end %>
+        <%= redirect_to restaurant_path %>
+      </div>
+    </div>
+  </div>
+
+  <h3><%= review.content %></h3>
+  <h4><%= review.rating %></h4>
+</div>
